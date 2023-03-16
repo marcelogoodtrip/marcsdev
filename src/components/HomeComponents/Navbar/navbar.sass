@@ -1,20 +1,19 @@
 @use '../../../styles/variables'
+@use '../../../styles/mixins'
 
 nav
-  position: absolute
-  top: 0
+  @include mixins.absolute-t0
   width: variables.$body-width
   padding: 2rem
-  font-size: 1.8rem 
+  font-size: variables.$title-size
   
   ul
-    display: flex
-    justify-content: space-between
+    @include mixins.flex-between
     list-style: none
 
     a
       text-decoration: none
-      transition: color 0.3s ease-in-out
+      transition: variables.$trans-3s
     
       &:hover
         color: variables.$text-second-color
