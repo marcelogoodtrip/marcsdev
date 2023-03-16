@@ -1,11 +1,21 @@
+@use '../../../styles/variables'
+
 nav
   position: absolute
   top: 0
-  width: 85%
+  width: variables.$body-width
   padding: 2rem
-  font-size: 2rem 
+  font-size: 1.8rem 
   
   ul
     display: flex
     justify-content: space-between
     list-style: none
+
+    a
+      text-decoration: none
+      transition: color 0.3s ease-in-out
+    
+      &:hover
+        color: variables.$text-second-color
+        font-weight: bold
