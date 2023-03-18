@@ -32,8 +32,10 @@ const SocialNetworks = () => {
 
     return () => {
       icons.forEach(icon => {
-        icon.removeEventListener('mouseenter', handleMouseEnter);
-        icon.removeEventListener('mouseleave', handleMouseLeave);
+        setTimeout(() => {
+          icon.removeEventListener('mouseenter', handleMouseEnter);
+          icon.removeEventListener('mouseleave', handleMouseLeave);
+        }, 2000); // 500ms de atraso antes de executar a função
       });
     }
   }, []);
@@ -41,16 +43,16 @@ const SocialNetworks = () => {
   return (
     <div className='social-networks'>
       { socialNetworks.map((network) => (
-        <div className={`icon ${network.name}`} key={network.name} data-icon={network.name}>
-          <a href={network.link} className='link' id={network.name}>
-            {network.icon}
-            {toggle && selectedIcon === network.name && (
+          <a href={network.link} className={`btn ${network.name}`} id={network.name}>
+            <div className="icon" key={network.name} data-icon={network.name}>
+              {network.icon}
+              {toggle && selectedIcon === network.name && (
               <span className={`name ${selectedIcon === network.name ? 'active' : ''}`}>
                 {network.name}
               </span>
             )}
+            </div>
           </a>
-        </div>
       )) }
     </div>
   )
