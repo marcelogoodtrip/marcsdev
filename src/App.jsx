@@ -1,13 +1,14 @@
 import './styles/app.sass'
-import Home from './pages/Home'
+import Home from './pages/home'
+import AboutMe from './pages/aboutme'
 
 function App() {
 
   return (
-    <div className="App">
-      <div className="smoke" />
+    <main className="App">
       <Home />
-    </div>
+      <AboutMe />
+    </main>
   )
 }
 
