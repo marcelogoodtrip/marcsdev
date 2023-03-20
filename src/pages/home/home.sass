@@ -2,7 +2,7 @@
 @use '../../styles/mixins'
 
 .home-container
-  @include mixins.absolute-t0-r0
+  position: relative
   @include mixins.flex-center
   @include mixins.w-h-100
   flex-direction: column
@@ -10,5 +10,7 @@
 
   .slogan-container
     @include mixins.flex-center
+    @include mixins.w-h-100
     flex-direction: column
+    padding: 2.4rem
   
