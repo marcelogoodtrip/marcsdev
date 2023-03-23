@@ -2,6 +2,12 @@
 @use '../../styles/mixins'
 
 .aboutme-container
-  background: #000
+  @include mixins.flex-center
   color: variables.$text-primary-color
   padding: 2rem
+  color: #CCC
+  background: #000
+
+  .box
+    display: flex
+    width: variables.$body-width

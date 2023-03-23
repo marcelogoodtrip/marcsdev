@@ -6,8 +6,10 @@ import './aboutme.sass'
 const AboutMe = () => {
   return (
     <section className='aboutme-container'>
-      <SideBar />
-      <MainContent />
+      <div className="box">
+        <SideBar />
+        <MainContent />
+      </div>
     </section>
   )
 }

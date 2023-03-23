@@ -1,4 +1,4 @@
-
+@use '../../../styles/variables'
 
 .sidebar
   display: flex
@@ -6,5 +6,24 @@
   flex-direction: column
   flex: 1 1 0
   position: relative
-  padding: 3rem 0
-  border: 1px solid red
+  padding: 3rem
+
+  .photo-container
+    width: 250px
+
+    .photo
+      max-width: 100%
+      border-radius: 50%
+
+  .about-container
+    margin: 2rem 0
+
+  .formations-container
+    h3
+      color: variables.$text-second-color
+      font-size: 2rem
+      font-weight: 400
+      padding: 1rem 0
+
+    .item
+      padding: 0.5rem 0
